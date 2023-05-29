@@ -1,10 +1,13 @@
 <template>
-  <q-input 
+  <div class="row">
+    <q-input 
       type="textarea"
       v-model="textRef" 
       outlined
       style="width: 500px;"
     />
+    <q-icon name="question-exchange"/>
+  </div>
 </template>
 
 <script>
