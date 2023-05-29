@@ -12,13 +12,12 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Study App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
+    <!-- nav bar todo later-->
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
@@ -93,6 +92,12 @@ const linksList = [
     link: 'https://awesome.quasar.dev'
   }
 ];
+
+const navigationList = [
+  {
+    title: '',
+  }
+]
 
 export default defineComponent({
   name: 'MainLayout',
