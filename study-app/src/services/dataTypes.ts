@@ -34,4 +34,18 @@ export interface quiz {
   // highestScore: number,
 }
 
+export interface content {
+  id : string,
+  content: string, 
+}
+
+export interface question {
+  id : string,
+  content: string, 
+}
+
+export interface answer {
+  id : string,
+  content: string, 
+}
 

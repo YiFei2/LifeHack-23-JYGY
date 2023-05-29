@@ -11,10 +11,26 @@ const routes: RouteRecordRaw[] = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { 
-        path: '/:subject_id', 
-        component: () => import('pages/SubjectPage.vue') 
+        path: '/subjects/:subject_id', 
+        component: () => import('pages/SubjectPage.vue'),
+        // children: [
+        //   {
+        //     path: '/chapters/:chapter_id',
+        //     component: () => import('pages/ContentPage.vue')
+        //   }
+        // ]
       }
     ],
+  },
+  {
+    path: '/subjects/:subject_id',
+    component: () => import('pages/SubjectPage.vue'),
+    children: [
+      {
+        path: '/chapters/:chapter_id',
+        component: () => import('pages/ContentPage.vue')
+      }
+    ]
   },
 
   // Always leave this as last one,
